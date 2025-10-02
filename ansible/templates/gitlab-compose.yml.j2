@@ -40,7 +40,9 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://{{ gitlab_external_hostname }}'
+        gitlab_rails['initial_root_email'] = '{{ gitlab_root_email }}'        
         gitlab_rails['initial_root_password'] = '{{ gitlab_root_password }}'
+        gitlab_rails['gitlab_username_changing_enabled'] = true
       RUNNER_TAG_LIST: shared
       REGISTER_NON_INTERACTIVE: "true"
       REGISTRATION_TOKEN: abcdefghijklmopqrstuvwxyz
