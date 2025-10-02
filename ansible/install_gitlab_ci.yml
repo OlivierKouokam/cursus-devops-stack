@@ -12,7 +12,8 @@
     #gitlab_runner_version: gitlab-runner:alpine-v18.4.0                           
     gitlab_runner_version: gitlab-runner:alpine-v13.8.0
     gitlab_port_ssh : 2222
-    gitlab_root_password: 'GitL@b_1234'
+    gitlab_root_email: admin@gitlab.local
+    gitlab_root_password: GitL@b_1234
     # docker_gitlab_runner_config_toml_template: templates/config.toml.j2
   roles:
     - ansible-docker-gitlab 
