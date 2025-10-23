@@ -26,8 +26,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 curl -sS https://bootstrap.pypa.io/pip/3.6/get-pip.py | sudo python3
 /usr/local/bin/pip3 install ansible
 apt install -y sshpass
-git clone https://github.com/diranetafen/cursus-devops.git
-cd cursus-devops/ansible
+#git clone https://github.com/diranetafen/cursus-devops.git
+git clone -b update/gitlab https://github.com/OlivierKouokam/cursus-devops-stack.git
+#cd cursus-devops/ansible
+cd cursus-devops-stack/ansible
 /usr/local/bin/ansible-galaxy install -r roles/requirements.yml
 #before install gitlab-ci we get the punlic dns
 

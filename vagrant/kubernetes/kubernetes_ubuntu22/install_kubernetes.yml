@@ -39,7 +39,7 @@
       ansible_distribution != 'Debian' 
   - name: disable swap
     shell: |
-      swapon -a
+      swapoff -a
     when: swap_disabled == true
     
   - name: install ntp
